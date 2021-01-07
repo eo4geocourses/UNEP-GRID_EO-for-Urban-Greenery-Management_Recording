@@ -1,0 +1,820 @@
+<!-- 	Template Authors: Stefan Lang, Eva Missoni - PLUS 
+		Template Creation Date: March-June 2020 
+		
+		IMPORTANT NOTICES FOR USERS/AUTHORS:  
+		SECTIONS TO BE EDITED BY AUTHORS ARE INDICATED AS FOLLOWS:  <!-- AUTHORS: DEFINE ... --> 
+<!--	THE COMMANDS <section> and </section>  EMBRACE THE CONTENT FOR EACH SINGLE SLIDE.
+		ALTERNATIVELY, YOU CAN USE MARKDOWN NOTATION TO CREATE YOUR SLIDES. More information: https://github.com/webpro/reveal-md 
+		-->
+		
+		
+<!doctype html>
+<html lang="en" >
+
+	<head>
+		<meta charset="utf-8">
+		 
+		<title>eo4geo template for Reveal JS</title>
+		
+	<!-- AUTHORS: DEFINE METADATA FOR WHOLE SLIDESET HERE: (Dublin Core Metadata format, complemented by BoK-Concepts) -->	
+		<meta property="dc:title" content="EO for urban greenery management" />
+		<meta property="dc:creator" content="Anna Adamowicz, Monika Szewczyk, Zbigniew Szkop, UNEP/GRID-Warsaw Centre" /> 
+		<meta property="dc:publisher" content="UNEP/GRID-Warsaw Centre" /> 
+		<meta property="dc:subject" content="..." />
+		<meta property="dc:abstract" content="..." />
+		<meta property="dc:tableOfContents" content="(1) What is EO?; 
+							     (2) Benefits of Copernicus; 
+							     (3) Integration of Jupyter Notebooks; 
+							     (4) Integration of Youtube Video; 
+							     (5) Integration of H5P; 
+							     (6) Copernicus Services; 
+							     (7) Reference list; />
+		<meta property="dc:description" content="Learning outcomes: Understand remote sensing workflow including image acquisition, (pixel-based) image analysis, classification and validation; get to know online portals, data catalogues, and pricing schemes for satellite data; Familiarize with the European Copernicus Earth observation programme; Master standard image analysis routines as implemented in ArcGIS Pro" /> 
+		<meta property="dc:contributor" content="Barbara Hofer" />
+		<meta property="dc:created" content="2020-12-21" />
+		<meta property="dc:type" content="teaching material" /> 
+		<meta property="dc:format" content="html" />
+		<meta property="dc:language" content="EN" />
+		<meta property="dc:SizeOrDuration" content="60min" />
+		<meta property="dc:audience" content="students" />
+		<meta property="dc:educationLevel" content="EQF 3" />
+		<meta property="dc:source” content="Existing youtube-video on Copernicus Climate Change Service; existing Jupyter Notebook on "Well switching in Bangladesh" />
+		<meta property="dc:rightsHolder" content="UNEP/GRID-Warsaw Centre" />
+		<meta property="dc:license" content="https://creativecommons.org/licenses/by-sa/4.0/deed.en" />
+
+		<link rel="dc:relation" href="eo4geo:IP1-3-2" />
+		<link rel="dc:relation" href="eo4geo:IP1-7" />
+		<link rel="dc:relation" href="eo4geo:IP1" />	
+		<link rel="dc:relation" href="eo4geo:IP3-4" />
+		<link rel="dc:relation" href="eo4geo:IP4-2-1" />
+
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/reveal.css">
+		<!-- CHOOSE BETWEEN 2 EO4GEO TEMPLATE THEMES:-->
+		<link rel="stylesheet" href="internal_restricted/v1.0/css/theme/eo4geo.css" id="theme"> <!-- white background design --> 
+		<link rel="stylesheet" href="internal_restricted/v1.0/plugin/markdown/css/theme/simplemenu.css">
+		 
+		<!-- EO4GEO FONT ROBOTO SLAB -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'> 
+		<link rel="stylesheet" href="partnerLogo.css" id="theme"> 
+		<link rel="stylesheet" href="customer_content/css/eo4geo_override.css" id="theme">
+
+    <base target="_blank"> <!-- All links in the presentation are opened in a seperate tab"-->
+ 
+	</head>
+
+	<body>
+		  
+		<div class="reveal" >
+		
+			 <!-- FORMATTING FOR HEADER -->
+			
+					
+				 <div class = "eo4geologo" style="width: 11%;height : 11%" ></div>	
+			
+				 <div class = "partnerlogo" style="width: 15%;height : 11%" ></div>		
+				 <div  class = "presentation_title" style=" text-align: center " >EO for urban greenery management</div>	<!--The title of the presentation appears on each slide-->
+				 
+
+				<div class="slides">
+				
+			
+				<!-- AUTHORS: DEFINE CONTENT ON YOUR FIRST SLIDE --> 
+				<section >
+					<h1>EO for urban greenery management</h1>
+					
+					<br><img height="300" data-src="resources\template_WhatCopernicus\title_slide.png" alt="intro">
+				<!-- AUTHORS: PUT YOUR PRESENTER NOTES HERE: -->
+				<aside class="notes">
+					Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+				</aside>
+				</section>
+				
+				<section>
+					<section>
+						<h1>Centrum UNEP/GRID-Warszawa</h1>
+						<br>
+						<img src="resources\template_WhatCopernicus\logo_grid_en.png" alt="Logo_GRIDW">						
+						<p>Od <b>1991</b> we are working for sustainable development fulfilling the mission of the <b><br>United Nations Environment Programme (UNEP)</b> w Polsce.</p>
+						<img src="resources\template_WhatCopernicus\logo_sdgs.png" alt="Logo_SDGs">
+					</section>
+					
+					<section>
+						<h1>Nasza misja</h1>
+						<br>
+						<p>To collect, process and disseminate geo-referenced information concerning natural resources of our planet as well as the environmental processes and phenomena, using geographical information systems and remote sensing techniques in the areas of:</p>
+						<br>
+						<table style="width: 1000px;">
+							<td style="text-align: center;"><font style="color:#6ab42d;"><b>zarządzanie <br>środowiskiem</b></font>
+							<img src="resources\template_WhatCopernicus\grid_management.jpg" alt="GRIDW_environmental_management"></td>
+							<td style="text-align: center;"><font style="color:#6ab42d"><b>różnorodność <br>biologiczna</b></font>
+							<img src="resources\template_WhatCopernicus\grid_bio_diversity.jpg" alt="GRIDW_biological_diversity"></td>
+							<td style="text-align: center;"><font style="color:#6ab42d"><b>aktywna <br>edukacja</b></font>
+							<img src="resources\template_WhatCopernicus\grid_education.jpg" alt="GRIDW_active_education"></td>
+							<td style="text-align: center;"><font style="color:#6ab42d"><b>zielona <br>gospodarka</b></font>
+							<img src="resources\template_WhatCopernicus\grid_green_economy.jpg" alt="GRIDW_green_economy"></td>
+						</table>
+					</section>
+					
+					<section>
+						<h1>Nasze projekty</h2>
+						<img src="resources\template_WhatCopernicus\grid_projects.png" alt="GRIDW_projects">
+					</section>
+					
+				</section>
+				
+				<section>
+					<section>
+						<h1>Table of content</h1>
+						<h2>EO for urban greenery management</h2>
+						<br>
+						<table>
+							<tr><td><b>1</b></td><td><b><a href="https://eo4geocourses.github.io/GISIG_Introduction_to_EO4GEO/#/">Projekt EO4GEO</a></b></td></tr>
+							<tr><td><b>2</b></td><td><b><a href="#/3">Wprowadzenie</a></b></td></tr>
+							<tr><td><b>3</b></td><td><b><a href="#/4">Usługi ekosystemowe</a></b></td></tr>
+							<tr><td><b>4</b></td><td><b><a href="#/5">Remotely sensed data in the context of <br>urban greenery management</a></b></td></tr>
+							<tr><td><b>5</b></td><td><b><a href="#/6">Warsaw case study</a></b></td></tr>
+						</table>
+					</section>
+					
+					<section>
+						<h1>Learning outcomes</h1>
+						<h2>EO for urban greenery management</h2>
+						<br>
+						<ul>
+							<li>Choose and collect suitable remotely sensed data</li>
+							<li>Explain how EO technology and products support the urban greenery management​ in the context of climate change</li>
+							<li>Describe how geospatial data are used for greenery and ecosystems services value assessment, land use planning and other applications</li>
+							<li>...</li>
+							<li>...</li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h1>Wprowadzenie</h1>
+						<h2>Europejski Zielony Ład</h2>
+						<br><img height="300" data-src="resources\template_WhatCopernicus\title_slide_u2.jpg" alt="Title_slide_unit2">
+					</section>
+					
+					<section>
+						<h2>Europejski Zielony Ład</h2>
+						<br>
+						<p>In December 2019, the Green Deal for Europe strategy was developed for the European Union's climate policy.</p>
+						<p>Do najważniejszych celów należą:</p>
+							<ul>
+								<li>adopting a binding climate neutrality target by 2050,</li>
+								<li>revision of the short-term target - the 2030 emissions reduction target is currently 40% compared to 1990 levels, but is planned to be increased to 50 or 55%.</li>
+							</ul>
+						<p>The European Green Deal provides an action plan to:</p>
+							<ul>
+								<li>boost the efficient use of resources by moving to a clean, circular economy,</li>
+								<li>restore biodiversity and cut pollution.</li>
+							</ul>
+						<aside class="notes">
+						The theme of urban green management is inextricably linked to European strategy documents setting climate targets – achieving climate neutrality by 2050 and reducing emissions by 2030. 
+						The European Union's Green Deal for Europe climat policy envisages achieving these objectives through efficient use of resources by moving to a clean, circular economy; cut pollution; but also through biodiversity restore. 
+						</aside>
+					</section>
+					
+					<section>
+						<h2>EU Biodiversity Strategy for 2030</h2>
+						<br>
+						<p>The Green Deal assumes the synergy of actions to combat the climate crisis, among others through actions to protect biodiversity, presented in the EU Biodiversity strategy until 2030.</p>
+						<p>EU Nature Restoration Plan (key commitments by 2030) includes Urban Greening Plan for cities with at least 20,000 inhabitants:</p>
+						<p><em>These should include measures to create biodiverse and accessible urban forests, parks and gardens; urban farms; green roofs and walls; treelined streets; urban meadows; and urban hedges.</em><p>
+						<p><em>They should also help improve connections between green spaces, eliminate the use of pesticides, limit excessive mowing of urban green spaces and other biodiversity harmful practices.</em><p>
+						<aside class="notes">
+						It thus refers to actions to protect biodiversity, presented in the EU Biodiversity strategy until 2030.  
+						What does it look like in practice? 
+						EU Nature Restoration Plan assumes that Cities with at least 20,000 inhabitants will develop Urban Greening Plans containing measures to create biodiverse and accessible urban forests, parks and gardens and other forms of urban greenery, as well as improve connections between green spaces, and eliminate biodiversity harmful practice like a f.e. use of pesticides or too frequent mowing of urban green spaces. 
+						</aside>
+					</section>
+					
+					<section>
+						<h2>Bioróżnorodność i zmiany klimatu</h2>
+						<br>
+						<p>The strategy aims to reverse these trends and stop the loss of green urban ecosystems as well as adaptation and mitigation to climate change by:</p>
+							<ul>
+								<li>promoting healthy ecosystems,</li>
+								<li>green infrastructure,</li>
+								<li>nature-based solutions.</li>
+							</ul>
+						<br>
+						<table>
+							<td><img data-src="resources\template_WhatCopernicus\greenery_forest.png" alt="Greenery_forest"></td>
+							<td><img data-src="resources\template_WhatCopernicus\greenery_city.png" alt="Greenery_city"></td>
+						</table>
+						<aside class="notes">
+						In order to stop the loss of green urban ecosystems while using the properties of urban greenery for adaptation and mitigation to climate change, measures are proposed to promote healthy ecosystems, i.e. the protection of natural natural systems located in the city tissue and wide range of nature-based solutions, including green infrastructure. 
+						</aside>
+					</section>
+					
+				</section>
+				
+				<section>
+					<section>
+						<h1>Ecosystem services</h1>
+						<h2>Ecosystem services provided by urban vegetation</h2>
+						<br><img height="300" data-src="resources\template_WhatCopernicus\title_slide_u3.png" alt="Title_slide_unit3">
+					</section>
+					
+					<section>
+						<h2>Microclimate control</h2>
+						<br><div>
+							<div style="float:left; width: 42%;">
+							<p>Trees reduce the scope of heat island in the summer period as the water evaporation from leaves is cooling the air.</p>
+							<p>LA deflect sun radiation (high albedo), which otherwise could be absorbed by impervious surfaces (low albedo).</p>
+							<p>Temperature reduction:</p>
+								<ul>
+									<li>Cooling (Kwh)</li>
+									<li>Pollution Avoided</li>
+								</ul>
+							</div>
+							<div style="float:right; width: 55%;"><img src="resources\template_WhatCopernicus\es_microclimate_control.png" alt="Microclimate_control"></div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>UV radiation protection</h2>
+						<br><div>
+							<div style="float:left; width: 42%;">
+							<p>Trees offer protection from harmful UV.</p>
+							<p>Tree leaves absorb around 95% of ultraviolet radiation.</p>
+							</div>
+							<div style="float:right; width: 55%;"><img src="resources\template_WhatCopernicus\es_uv_radiation.png" alt="UV_radiation"></div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Stormwater control</h2>
+						<br><div>
+							<div style="float:left; width: 42%;">
+							<p>Trees are increasingly recognized for their importance in managing runoff:</p>
+							<ul>
+								<li>Reducing erosion caused by falling rain</li>
+								<li>Providing surface area where rain water lands and evaporates</li>
+								<li>Creating conditions in the soil that promote infiltration</li>
+							</ul>
+							</div>
+							<div style="float:right; width: 55%;"><img src="resources\template_WhatCopernicus\es_stormwater.png" alt="Stormwater"></div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Air purification</h2>
+						<br><div>
+							<div style="float:left; width: 42%;">
+							<p>Trees breath in harmful for humans gasses like NO2 , SO2 , O3 or CO and capture PM.</p>
+							<p>Large trees absorb many times more pollution that small trees.</p>
+							<p>Tunnelling effect.</p>
+							</div>
+							<div style="float:right; width: 55%;"><img src="resources\template_WhatCopernicus\es_air_purification.png" alt="Air_purification"></div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Energy conservation</h2>
+						<br><div>
+							<div style="float:left; width: 42%;">
+							<p>Trees provide shade</p>
+							<p>Trees block wind</p>
+							<p>Energy conservation:</p>
+							<ul>
+								<li>Heating (MBTU and Kwh)</li>
+								<li>Cooling (Kwh)</li>
+								<li>Pollution Avoided</li>
+							</ul>
+							</div>
+							<div style="float:right; width: 55%;"><img src="resources\template_WhatCopernicus\es_energy_conservation.png" alt="Energy_conservation"></div>
+						</div>
+					</section>
+					
+					<section>
+						<h2><em>In situ</em> urban trees inventory</h2>
+						<br>
+						<table>
+							<td>
+							<p style="text-align: left;"><b>Collected data:</b></p>
+							<ul><li>Location, dbh, total height, crown size, dieback etc.</li></ul>
+							<br>
+							<p style="text-align: left;"><b>Challenges:</b></p>
+							<ul>
+								<li>Expensive</li>
+								<li>Time consuming</li>
+								<li>Limited access to private areas</li>
+								<li>Lack of coherence in data collection (human factor)</li>
+								<li>Quickly outdated</li>
+							</ul>
+							</td>
+							<td valign=top><img src="resources\template_WhatCopernicus\trees_inventory.jpg" alt="Trees_inventory"></td>
+						</table>
+					</section>
+					
+				</section>
+				
+				<section>
+					<section>
+						<h1>Remote sensing data</h1>
+						<h2>As an alternative to in situ study</h2>
+						<br><img height="300" data-src="resources\template_WhatCopernicus\title_slide_u4.jpg" alt="Title_slide_unit4">
+					</section>
+					
+					<section>
+						<h2>Earth Observation</h2>
+						<table>
+							<td width=40%>
+							<p style="text-align: left;"><b>Sources:</b></p>
+							<ul><li>Satellites, planes and drones</li></ul>
+							<br>
+							<p style="text-align: left;"><b>Collected data:</b></p>
+							<ul><li>An image of the Earth's surface captured by remote sensors</li></ul>
+							<br>
+							<p style="text-align: left;"><b>Benefits:</b></p>
+							<ul>
+								<li>Cheap</li>
+								<li>Quick</li>
+								<li>Spatially continous</li>
+								<li>Objective</li>
+								<li>Current and collected regularly at short intervals</li>
+							</ul>
+							</td>
+							<td><img data-src="resources\template_WhatCopernicus\various_platforms.png" alt="Various_platforms">
+							<p><small>Various platforms and sensors used for remote sensing (Source: 
+							<a href="https://www.researchgate.net/figure/Various-platforms-and-sensors-used-for-remote-sensing_fig1_307351403">Research Gate</a>)</small></td>
+						</table>
+					</section>
+					
+					<section>
+						<h2>Advantages of using remote sensing data</h2>
+						<br>
+						<ol>
+							<li>Earth observation data - unique source of information. Earth observation can provide a unique and timely source of data that is commensurable across countries, regions and cities.</li>
+							<li>It can be combined with administrative, social and economic data at multiple scales for in-depth policy analysis.</li>
+							<li>It can help harmonise reporting on natural resources, ecosystems and environmental risks.</li>
+							<li>Remote sensing allows to capture an image of a large area of the Earth in short intervals and relatively cheaply. The image is spatially continuous.</li>
+							<li>Information obtained from Earth observation is objective and can be automatically classified.</li>
+						</ol>
+					</section>
+					
+					<section>
+						<h2>EO data</h2>
+						<br><div>
+							<div style="float:right; width: 40%;">
+								<ul>
+									<li>1957 - Sputnik 1</li>
+									<li>1972 - Landsat 1 (NASA & USGS)</li>
+									<li>1986 - SPOT</li>
+								</ul>
+								<p>Beginning of the 21st century - development of very high resolution techniques (VHR)</p>
+								<ul>	
+									<li>2014 - Sentinel-1 (ESA)</li>
+									<br>
+									<li>Satelity komercyjne (rozdzielczość przestrzenna poniżej 1 m), np.: Ikonos, QuickBird, WorldView, GeoEye, Pleiades, Kompsat </li>
+								</ul>
+							</div>
+							<div style="float:left; width: 60%;">
+								<img data-src="resources\template_WhatCopernicus\satellites.png" alt="Satellites">
+								<p><small>Satelity wokół Ziemi (Źródło: <a href="https://www.esa.int/">ESA</a>/Rex Features)</small></p>
+							</div>
+						</div>
+						
+					</section>
+					
+					<section>
+						<h2>Charakterystyka danych teledetekcyjnych</h2>
+						<table>
+							<td >
+							<p>Wysokość i parametry orbity</p>
+							<p>Wielkość ceny</p>
+							<p>Rozdzielczość:</p>
+								<ul>
+									<li>Przestrzenna</li>
+									<li>Spektralna</li>
+									<li>Radiometryczna</li>
+									<li>Czasowa</li>
+								</ul>
+							</td>
+							<td><img data-src="resources\template_WhatCopernicus\eo_data_theory.png" alt="Remote_sensing_theory">
+							<p><small>Teledetekcja (Źródło: 
+							<a href="https://www.whymap.org/EN/Themen/GG_Fernerkundung/Bilder/hyperspektrale_Fe_p_en.html?view=render[NeuesFenster]">WhyMap</a>)</small></td>
+						</table>
+					</section>
+					
+					<section>
+						<h2>Rozdzielczość przestrzenna</h2>
+						<br>
+						<div style="width:900px">
+							<div style="float:left; width:400px">
+							<p><b><font style="color:#ea9b2d">Rozdzielczość przestrzenna</font></b> - the size of the smallest object (pixel) observed on the ground.</p>
+							<p>Object is detected if its equal or larger than the pixel size. The smaller objects are detectable as the average brightness of all objects within the pixel.</p>
+							</div>
+							<div style="float:right; width:490px">
+							<img data-src="resources\template_WhatCopernicus\spatial_resolution.jpg" alt="Spatial_resolution">
+							<p><small>(Źródło: <a href="https://www.radiant.earth/">Radiant Earth Foundation</a>)</small></p>
+							</div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Rozdzielczość spektralna</h2>
+						<br><p><b><font style="color:#ea9b2d">Rozdzielczość spektralna</font></b> - refers to the spectral bandwidth and the number of bands.</p>
+						<p>The finer spectral resolution, the narrower the wavelength range for the particular band.</p>
+						<img data-src="resources\template_WhatCopernicus\spectral_resolution.png" alt="Spectral_resolution">
+						<p><small>(Źródło: <a href="https://www.radiant.earth/">Radiant Earth Foundation</a>)</small></p>
+					</section>
+					
+					<section>
+						<h2>Radiometric resolution</h2>
+						<br>
+						<div style="width:900px">
+							<div style="float:left; width:400px">
+							<p><b><font style="color:#ea9b2d">Radiometric resolution</font></b> - the sensitivity to the magnitude of the electromagnetic energy. It describes the actual information content in an image, expressed in units of bits.</p>
+							<p>The finer the radiometric resolution, the more sensitive it is to detect small differences in reflected or emitted energy.</p>
+							</div>
+							<div style="float:right; width:490px">
+							<img height="400px" data-src="resources\template_WhatCopernicus\radiometric_resolution.jpg" alt="Radiometric_resolution"> 
+							<p><small>(Source: <a href="https://www.researchgate.net/figure/Effect-of-Radiometric-Resolution-18_fig5_341164804">Research Gate</a>)</small></p></div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Temporal resolution</h2>
+						<br><p><b><font style="color:#ea9b2d">Temporal resolution</font></b> - frequency at which the same place is observed (revisit capability).</p>
+						<p>It is particularly important for change mapping.</p>
+						<img data-src="resources\template_WhatCopernicus\temporal_resolution.jpg" alt="Temporal_resolution">
+						<p><small>(Source: <a href="https://www.radiant.earth/">Radiant Earth Foundation</a>)</small></p>
+					</section>
+					
+					<section>
+						<h2>Źródła danych satelitarnych</h2>
+						<br><p>Przykłady przeglądarek danych satelitarnych:</p>
+						<ul>
+							<li>Sentinel-Hub: <a href="https://apps.sentinel-hub.com/eo-browser/">https://apps.sentinel-hub.com/eo-browser/</a></li>
+							<li>Sentinel-Playground: <a href="https://apps.sentinel-hub.com/sentinel-playground/">https://apps.sentinel-hub.com/sentinel-playground/</a></li>
+							<li>Copernicus Open Access Hub (ESA): <a href="https://scihub.copernicus.eu/dhus/#/home">https://scihub.copernicus.eu/dhus/#/home</a></li>
+							<li>Creodias: <a href="https://browser.creodias.eu/">https://browser.creodias.eu/</a></li>
+							<li>Earthdata Search (NASA): <a href="https://search.earthdata.nasa.gov/search">https://search.earthdata.nasa.gov/search</a></li>
+						</ul>
+					</section>
+					
+					<section>
+						<h2>Źródła danych satelitarnych</h2>
+						<p>Open access to high resolution images and different data visualizations in three steps:</p>
+						<table>
+							<td class="fragment" style="width:280px;">
+							<p>Go to your area of interest</p>
+							<img data-src="resources\template_WhatCopernicus\step1.png" alt="EO_browser_step1">
+							</td>
+							<td style="width:20px;"></td>
+							<td class="fragment" style="width:280px;">
+							<p>Select your desired time range and cloud coverage</p>
+							<img data-src="resources\template_WhatCopernicus\step2.png" alt="EO_browser_step2">
+							</td>
+							<td style="width:20px;"></td>
+							<td class="fragment" style="width:280px;">
+							<p>Inspect the resulting data in the browser</p>
+							<img data-src="resources\template_WhatCopernicus\step3.png" alt="EO_browser_step3">
+							</td>
+						</table>
+					</section>
+					
+					<section>
+						<h2>Źródła danych satelitarnych</h2>
+						<img data-src="resources\template_WhatCopernicus\sentinel_hub_rgb.png" alt="Sentinel_2_browser">
+						<p><small>Zdjęcie satelitarne Sentinel-2 RGB (Źródło: Przeglądarka <a href="https://apps.sentinel-hub.com/eo-browser/">Sentinel-Hub</a>)</small></p>
+					</section>
+					
+					<section>
+						<h2>Źródła danych satelitarnych</h2>
+						<br><div>
+							<div style="float:left; width:50%">
+							<img data-src="resources\template_WhatCopernicus\sentinel_hub_ndvi.png" alt="Sentinel_NDVI">
+							<p><small>Zdjęcie Sentinel-2 wskaźnik NDVI (Źródło: Przeglądarka <a href="https://apps.sentinel-hub.com/eo-browser/">Sentinel-Hub</a>)</small></p>
+							</div>
+							<div style="float:right; width:50%">
+							<img data-src="resources\template_WhatCopernicus\creodias_sentinel_glc.png" alt="Sentinel_GLC">
+							<p><small>Pokrycie terenu Sentinel-2 GLC(Źródło: <a href="https://browser.creodias.eu/#">Creodias Browser</a>)</small></p>
+							</div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Sentinel-2</h2>
+						<br>
+						<ul>
+							<li><b>Wystrzelenie:</b> 23 June 2015 (Sentinel-2A) and 7 March 2017 (Sentinel-2B)</li>
+							<li><b>Wysokość orbity:</b>  799 km</li>
+							<li><b>Instrument:</b> the Multi-Spectral Instrument (MSI)</li>
+							<li><b>Rozdzielczość przestrzenna:</b> 10 m / 20 m / 60 m</li>
+							<li><b>Rozdzielczość spektralna:</b> 13 spectral bands (VI/Red Edge/NIR/SWIR)</li>
+							<li><b>Rozdzielczość czasowa:</b> 10 days (1 satellites) 5 days (1 satellite)</li>
+							<li><b>Wielkość sceny:</b> 290 km</li>
+							<li><b>Główne zastosowania</b> obejmują rolnictwo; monitorowanie ekosystemów lądowych; gospodarkę leśną; monitorowanie jakości wód śródlądowych i przybrzeżnych; mapowanie katastrof naturalnych i bezpieczeństwa cywilnego</li>
+							<li>Program Copernicus:</li>
+						</ul>
+						<img data-src="resources\template_WhatCopernicus\copernicus_services_selectes.png" alt="Copernicus_services">
+					</section>
+					
+					<section>
+						<h2>Produkty Sentinel-2</h2> 
+						<p>Produkty Sentinel-2 dostępne dla użytkowników:</p>
+						<table>
+							<tr><td style="width:100px;">Nazwa</td><td>Opis</td><td style="width:170px;">Objętość danych</td></tr>
+							<tr><td>Level-1C</td><td>Top-Of-Atmosphere reflectances in cartographic geometry (TOA, UTM/WGS84)</td><td>600 MB (100km x 100km)</td></tr>
+							<tr><td>Level-2A</td><td>Bottom-Of-Atmosphere reflectances in cartographic geometry (BOA, UTM/WGS84)</td><td>800 MB (100km x 100km)</td></tr>
+						</table>
+						<table>
+							<td style="width: 200px;">
+							<img data-src="resources\template_WhatCopernicus\level_1c.png" alt="Sentinel2_level1c">
+							</td>
+							<td style="width: 200px;">
+							<img data-src="resources\template_WhatCopernicus\level_2a.png" alt="Sentinel2_level2a">
+							</td>
+						</table>
+						<p><small>Produkty Sentinel-2: Level-1C (left) and Level-2A (right) (Źródło: Przeglądarka <a href="https://apps.sentinel-hub.com/eo-browser/">Sentinel-Hub</a>)</small></p>
+					</section>
+
+					<section>
+						<h2>Urban Atlas</h2>
+						<br>
+						<div>
+							<div style="float:left; width:40%">
+							<p style="text-align:left;"><b>Zasięg przestrzenny:</b> EU27, EFTA countries, West Balkans, Turkey, UK</p>
+							<p style="text-align:left;"><b>Klasyfikacja:</b> 17 urban classes with MMU 0.25 ha and 10 rural classes with MMU 1ha, MMW 10 m</p>
+							<p style="text-align:left;"><b>Produkty:</b></p>
+									<p style="text-align: left; font-size:18px;">&#8594; Land Cover/Land Use - edition 2018</p>
+									<p style="text-align: left; font-size:18px;">&#8594; 2012-2018 change product</p>
+									<p style="text-align: left; font-size:18px;">&#8594; Revised 2012 edition of Urban Atlas</p>
+									<p style="text-align: left; font-size:18px;">&#8594; Street Tree Layer (STL)</p>
+							</div>
+							<div style="float:right; width:55%">
+							<img data-src="resources\template_WhatCopernicus\urban_atlas_extent.png" alt="Urban_Atlas">
+							<p><small>Extent of Urban Atlas 2018 (Source: <a href="https://land.copernicus.eu/local/urban-atlas/urban-atlas-2018">Land Monitoring Service</a>)</small></p>
+							</div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Street Tree Layer</h2>
+						<br>
+						<div>
+							<div style="float:left; width:40%">
+							<p style="text-align:left;">The <b>Street Tree Layer (STL)</b> is a separate layer from the Urban Atlas 2012 LU/LC layer produced within the level 1 urban mask for each FUA.</p>
+							<p style="text-align:left;">It includes contiguous rows or a patches of trees covering 500 m² or more and with a minimum width of 10 meter over "Artificial surfaces" (nomenclature class 1) inside FUA (i.e. rows of trees along the road network outside urban areas or forest adjacent to urban areas should not be included).</p>
+							</div>
+							<div style="float:right; width:55%">
+							<img data-src="resources\template_WhatCopernicus\tree_street_layer_extent.png" alt="Tree_Street_Layer">
+							<p><small>Street Tree Layer 2012 (Source: <a href="https://land.copernicus.eu/local/urban-atlas/street-tree-layer-stl">Land Monitoring Service</a>)</small></p>
+							</div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>High Resolution Layers</h2>
+						<br><img data-src="resources\template_WhatCopernicus\hrl.png" alt="High_resolution_layer">
+						<p><small>High resolution layers (Source: <a href="https://land.copernicus.eu/pan-european/high-resolution-layers">Land Monitoring Service</a>)</small></p>
+					</section>
+					
+					<section>
+						<h2>Application examples</h2>
+						<br>
+						<div>
+							<div style="float: left; width: 30%;">
+							<img data-src="resources\template_WhatCopernicus\logo_adaptcity.png" alt="Adaptcity_logo">
+							</div>
+							<div styl="float: right; width: 60%;"></div>
+							<p>Examples of the use of satellite images are based on the results</p>
+							<p>of the <b>ADAPTCITY project </b></p>
+							<p><em>Preparation of a strategy of adaptation to climate change with use of city climate mapping and public participation</em></p>
+							<p>and the publication <b>"Warsaw from space"</b>.</p>
+						</div>
+					</section>					
+					
+					<section>
+						<h2>Application examples (1)</h2>
+						<div>
+						<div style="float: left; width: 30%;">
+						<br><p>Land cover change detection:</p>
+							<ul>
+								<li>increase/decrease of green areas in the city</li>
+								<li>determination of change trend</li>
+							</ul>
+						</div>
+						<div style="float: right; width: 70%;">
+						<img data-src="resources\template_WhatCopernicus\ex_1_land_cover.png" alt="Application_example_1_land_cover">
+						<p><small>(A) Land cover in Warsaw - Urban Atlas 2018, (B) Land cover changes in Warsaw between 2012 and 2018 (Source: Publication
+						<a href="https://www.pine.org.pl/wp-content/uploads/2019/07/atlas-web.pdf"><i>Warszawa z kosmosu</i></a>)</small></p>
+						</div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Application examples (2)</h2>
+						<p>Permeable (biologically active) vs. impermeable (artificial) surfaces</p>
+						<div>
+							<div style="float: left; width: 50%;">
+								<img height="450px" data-src="resources\template_WhatCopernicus\ex_2a_surface.png" alt="Application_example_2a_surface">
+							</div>
+							<div style="float: right; width: 50%;">
+								<img height="450px" data-src="resources\template_WhatCopernicus\ex_2b_surface.png" alt="Application_example_2b_surface">
+							</div>
+						<p><small>(A) Surface impermeability in 2014, (B) Percentage of biologically active surface in 2018 (Source: Publication
+						<a href="https://www.pine.org.pl/wp-content/uploads/2019/07/atlas-web.pdf"><i>Warszawa z kosmosu</i></a>)</small></p>
+						<div>
+					</section>
+					
+					<section>
+						<h2>Application examples (3)</h2>
+						<div>
+						<div style="float: left; width: 55%;">
+							<img height="500px" data-src="resources\template_WhatCopernicus\ex_3_surface_change.png" alt="Application_example_3_surface_change">
+							<p><small> Change of biologically active surface - comparison of the situation in 2006 and 2014 (Source: Publication
+							<a href="https://www.pine.org.pl/wp-content/uploads/2019/07/atlas-web.pdf"><i>Warszawa z kosmosu</i></a>)</small></p>
+						</div>
+						<div style="float: right; width: 40%;">
+							<p>Change detection: decrease of impermeable surfaces</p>
+							<img data-src="resources\template_WhatCopernicus\ex_3a_surface_change.png" alt="Application_example_3a_surface_change">
+							<p><small>Biologically active surface in Fort Służew in 2016 and 2018 (Source: Publication
+							<a href="https://www.pine.org.pl/wp-content/uploads/2019/07/atlas-web.pdf"><i>Warszawa z kosmosu</i></a>)</small></p>
+						</div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Application examples (4)</h2>
+						<div>
+							<div style="float: left; width: 40%;">
+							<p><b>NDVI - Normalized Difference Vegetation Index</b></p>
+							<p>Effective for quantifying green vegetation. Positively correlated with vegetation greenness.</p>
+							<p>NDVI = (NIR – Red) / (NIR + R)<br>For Sentinel-2 the formula is:<br>(B8 - B4) / (B8 + B4)<br>where: B8 = 842 nm, B4 = 665 nm</p>
+							<p>NDVI range value is -1 to 1</p>
+							<img height="150px" data-src="resources\template_WhatCopernicus\ex_4_ndvi_legend.png" alt="Application_example_4_ndvi_legend">
+							</div>
+							<div style="float: right; width: 50%;">
+							<img data-src="resources\template_WhatCopernicus\ex_4_ndvi.png" alt="Application_example_4_ndvi">
+							<p><small>NDVI value on 12.09.2018 (Source: Publication
+							<a href="https://www.pine.org.pl/wp-content/uploads/2019/07/atlas-web.pdf"><i>Warszawa z kosmosu</i></a>)</small></p>
+							</div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Application examples (5)</h2>
+						<div>
+							<div style="float: left; width: 45%;">
+								<br><ul>
+									<li><b>NDII</b> (Normalized Difference Infrared Index)</li>
+									<li><b>MSI</b> (Moisture Stress Index)</li>
+									<li><b>NDWI</b> (Normalized Difference Water Index)</li>
+									<li><b>SAVI</b> (Soil Adjusted Vegetation Index)</li>
+									<li><b>EVI</b> (Enhanced Vegetation Index)</li>
+								</ul>
+							<br><p>
+							<a href="https://www.indexdatabase.de/db/is.php?sensor_id=96">Index database</a></p>
+							<img height="150px" data-src="resources\template_WhatCopernicus\ex_5_ndii_legend.png" alt="Application_example_5_ndii_legend">
+							</div>
+							<div style="float: right; width: 50%;">
+							<img data-src="resources\template_WhatCopernicus\ex_5_ndii.png" alt="Application_example_5_ndii">
+							<p><small>NDII value on 31.08.2017 (Source: Publication
+							<a href="https://www.pine.org.pl/wp-content/uploads/2019/07/atlas-web.pdf"><i>Warszawa z kosmosu</i></a>)</small></p>
+							</div>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Application examples (6)</h2>
+						<div>
+							<div style="float: left; width: 50%;">
+							<img height="500px" data-src="resources\template_WhatCopernicus\ex_6a_temperature_surface.png" alt="Application_example_6_temp_surface">
+							</div>
+							<div style="float: right; width: 50%;">
+							<img height="500px" data-src="resources\template_WhatCopernicus\ex_6b_albedo.png" alt="Application_example_6_albedo">
+							</div>
+							<p><small>(A) Surface temperature on 20.06.2013, (B) Albedo gaps (%) 8.09.2013 - 12.09.2018 (Source: Publication
+							<a href="https://www.pine.org.pl/wp-content/uploads/2019/07/atlas-web.pdf"><i>Warszawa z kosmosu</i></a>)</small></p>
+						</div>
+					</section>
+					
+					<section>
+						<h2>Applications and limitations</h2>
+						<div>
+						<div style="float: left; width: 40%;"><p><b>Applications:</b></p>
+						<ul>
+							<li>Identification and classification of different types of green areas</li>
+							<li>Estimation of green urban areas</li>
+							<li>Proximity of green urban areas</li>
+							<li>Change detection</li>
+							<li>Vegetation and water indices</li>
+						</ul>
+						<br>
+						<p><b>Limitations:</b></p>
+						<ul>
+							<li>Detailed attributes of the single tree (taxon, height, ...)</li>
+							<li>Trees health assessment (defoliation, discoloration)</li>
+						</ul></div>
+						<div style="float: right; width: 60%;">
+						<img data-src="resources\template_WhatCopernicus\resolution_comparison.png" alt="Resolution_images">
+						<p><small>Comparison of spatial resolution - image with a resolution of 10 m (left) and 1 m (right)</small></p>
+						</div>
+						</div>
+					</section>
+					
+				</section>
+				
+				<section>
+					<section>
+						<h1>Warsaw case study</h1>
+						<h2>Warsaw's Tree Crown Map</h2>
+						<br><img height="300" data-src="resources\template_WhatCopernicus\title_slide_u5.jpg" alt="Title_slide_unit_5">
+					</section>
+					
+					
+					<section>
+						<h2>Tree Crown Map - methodology</h2>
+					</section>
+					
+					
+					<section>
+						<h2>Tree Crown Map - implementation</h2>
+					</section>
+					
+				</section>
+				
+				<section>
+					<section>
+						<h1>Learn more...</h1>
+						<br><ul>
+							<li>About remote sensing - <a href="https://eo4geocourses.github.io/IGIK_Introduction-to-Remote-Sensing/#/">see presentation</a></li>	
+							<li>About Sentinel-2 data and vegetation indices - <a href="https://eo4geocourses.github.io/IGIK_Sentinel2-Data-and-Vegetation-Indices/#/">see presentation</a></li>
+							<li>About EO data sources - <a href="https://eo4geocourses.github.io/GEOF_EO-Data-sources/#/">see presentation</a></li>
+							<li>About Copernicus services - <a href="https://www.copernicus.eu/">see website</a></li>
+							<li>About Warsaw's Tree Crown Map - <a href="http://zzw.waw.pl/tag/mapa-koron-drzew/#">see website</a></li>
+						</ul>
+					</section>
+					
+					<section>
+						<h1>Reference list:</h1>
+						<br><ul>
+							<li></li>
+							<li>Existing EO4GEO training materials: 
+							<a href="https://eo4geocourses.github.io/IGIK_Introduction-to-Remote-Sensing/#/">Introduction to Remote Sensing</a>,
+							<a href="https://eo4geocourses.github.io/IGIK_Sentinel2-Data-and-Vegetation-Indices/#/">Sentinel-2 data and vegetation indices </a>and 
+							<a href="https://eo4geocourses.github.io/GEOF_EO-Data-sources/#/">EO Data sources</a></li>
+							<li>Websites:</li>
+								<ul>
+									<li><a href="https://www.copernicus.eu/">Copernicus Services</a></li>
+									<li><a href="https://sentinel.esa.int/web/sentinel/home">ESA - Sentinel</a></li>
+									<li><a href="https://mapa.um.warszawa.pl/mapaApp1/mapa?service=zielen">Warsaw's Greenery Map</a></li>
+								</ul>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<h1>Thank you!</h1>
+				</section>
+					
+				<section>Slide show ends.</section>
+			
+                </section>
+
+              </div>
+
+
+		<script src="internal_restricted/v1.0/js/reveal.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: './internal_restricted/v1.0/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: './internal_restricted/v1.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: './internal_restricted/v1.0/plugin/notes/notes.js' },{ src: 'socket.io/socket.io.js', async: true },
+					{ src: './internal_restricted/v1.0/plugin/notes-server/client.js', async: true }
+					
+				]
+			});
+
+		</script>
+		
+		<!-- rauslöschen?? -->
+		<script>Reveal.initialize({
+			simplemenu: {
+				menuselector: '.menu a'
+			},
+			dependencies: [
+				{ src: './internal_restricted/v1.0/plugin/markdown/assets/js/revealjs/plugin/simplemenu/simplemenu.js', async: false } 
+			]
+			});
+		</script>
+
+	</body>
+</html>
