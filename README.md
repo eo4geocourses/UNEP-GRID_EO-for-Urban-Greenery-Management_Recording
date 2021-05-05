@@ -1,3 +1,5 @@
+You can watch the video from the webinar here: https://www.youtube.com/watch?v=vTEcv6Jkznc 
+
 # Information on using github for the collection of eo4geo training material content 
 
 The following guidelines apply to eo4geo partners who contribute training material content on the basis of the Reveal JS template: 
